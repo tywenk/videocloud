@@ -20,8 +20,8 @@ S3_UPLOAD_FOLDER: str = "uploads/"
 S3_DOWNLOAD_FOLDER: str = "rendered/"
 
 if RUNNING_IN_LAMBDA:
-    AWS_ACCESS_KEY: str = ""
-    AWS_SECRET_ACCESS_KEY: str = ""
+    AWS_ACCESS_KEY = None
+    AWS_SECRET_ACCESS_KEY = None
 else:
     AWS_ACCESS_KEY: str = os.getenv("AWS_ACCESS_KEY")
     AWS_SECRET_ACCESS_KEY: str = os.getenv("AWS_SECRET_ACCESS_KEY")
